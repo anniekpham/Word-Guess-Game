@@ -1,3 +1,5 @@
+
+
 let Won = 0, Lost = 0, Guesses = 10;
 
 document.querySelector(`#scores`).innerHTML = `

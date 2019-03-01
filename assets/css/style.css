@@ -60,6 +60,26 @@ body {
     right: 36em;
     transform: rotate(-20deg)
 }
+.star1 {
+    width: 8%;
+    position: absolute;
+    transform: rotate(50deg);
+    top: 32em;
+}
+.star2 {
+    width: 11%;
+    position: absolute;
+    top: 1em;
+    left: .5em;
+}
+.star3 {
+    width: 20%;
+    position: absolute;
+    right: 1.5em;
+    top: 26em;
+    transform: rotate(-30deg)
+
+}
 
 @media only screen and (max-width:980px){
     .name {
@@ -89,6 +109,26 @@ body {
        padding-bottom: 300px;
        left: 4em;
     }
+    .guesses {
+        font-size: 22px;
+        transform: rotate(0);
+        top: 6.5em;
+        left: 18em;
+        right: .5em;
+    }
+    .star1 {
+        top: 35.2em;
+        width: 10%;
+    }
+    .star2{
+        width: 15%
+    }
+    .star3 {
+        width: 30%;
+        transform: rotate(-20deg);
+        top: 33em;
+        right: 1.6em;
+    }
 }
 @media only screen and (max-width:640px){
     .name {
@@ -96,16 +136,16 @@ body {
         font-size: 70px;
     }
     .letter1 {
-        left: .1em
+        left: .3em
     }
     .letter2 {
-        left: .9em
+        left: 1em
     }
     .letter3 {
-        left: 1.4em
+        left: 1.5em
     }
     .letter4 {
-        left: 2em
+        left: 2.1em
     }
     .letter5 {
         left: 2.6em
@@ -119,18 +159,31 @@ body {
     .start{
         font-size: 20px;
         top: 8em;
-        right: 5em;
+        right: 11.5em;
     }
     .scores {
-        right: 1.5em;
+        right: 7em;
         top: 3.3em;
         font-size: 25px;
     }
     .guesses {
         top: 3.5em;
         font-size: 23px;
-        right: 3em;
+        left: 1em;
         width: 30%;
         transform: rotate(0)
+    }
+    .star1 {
+        top: 22em;
+        width: 40px;
+    }
+    .star2 {
+        width: 60px;
+        top: 8em;
+    }
+    .star3 {
+        width: 110px;
+        left: 12em;
+        top: 32em;
     }
 }
