@@ -38,25 +38,52 @@ body {
 .letter7{
     transform: rotate(7deg)
 }
+.start {
+    position: absolute;
+    font-family: 'Pangolin', cursive;
+    font-size: 30px;
+    right: 1em;
+    top: 2.5em;
+}
 .scores {
     position: absolute;
     font-family: 'Pangolin', cursive;
     font-size: 40px;
     top: 2.8em;
     right: 2em;
+    border: 3px dashed black;
+    padding: 1%;
 }
 .guesses {
     position: absolute;
     font-family: 'Pangolin', cursive;
     font-size: 40px;
-    top: 5.6em;
-    right: 7em;
+    top: 17em;
+    left: 2em;
+    right: 36em;
+    transform: rotate(-20deg)
 }
 
 @media only screen and (max-width:980px){
     .name {
-        font-size: 90px;
-        padding-bottom: 400px;
+        font-size: 70px;
+        padding-bottom: 300px;
+    }
+    .start {
+        top: .8em;
+        font-size: 25px;
+    }
+    .guesses {
+        top: 13em;
+        right: 25.5em;
+        left: .5em;
+        font-size: 30px;
+        transform: rotate(-15deg)
+    }
+    .scores {
+        top: 1.5em;
+        right: 2em;
+        font-size: 32px;
     }
 }
 @media only screen and (max-width:768px){
@@ -98,6 +125,6 @@ body {
     }
     .guesses {
         font-size: 30px;
-        left: 1em;
+        right: 3em;
     }
 }
