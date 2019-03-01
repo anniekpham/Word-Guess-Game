@@ -159,10 +159,10 @@ body {
     .start{
         font-size: 20px;
         top: 8em;
-        right: 11.5em;
+        right: 6.5em;
     }
     .scores {
-        right: 7em;
+        right: 4em;
         top: 3.3em;
         font-size: 25px;
     }
@@ -179,11 +179,11 @@ body {
     }
     .star2 {
         width: 60px;
-        top: 8em;
+        top: 9em;
     }
     .star3 {
-        width: 110px;
-        left: 12em;
+        width: 120px;
+        left: 13em;
         top: 32em;
     }
 }
