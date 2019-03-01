@@ -1,0 +1,98 @@
+body {
+    background-image: url(../images/109419-paper-yellow-rectangle-line-angle-2560x1600.jpg)
+}
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    /* display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr; */
+}
+.name {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 150px;
+    position: absolute;
+    transform-origin: bottom center;
+    padding-bottom: 650px;
+    left: 4.5em;
+}
+.letter1{
+    transform: rotate(-55deg)
+}
+.letter2{
+    transform: rotate(-43.5deg)
+}
+.letter3{
+    transform: rotate(-35deg)
+}
+.letter4{
+    transform: rotate(-25deg)
+}
+.letter5{
+    transform: rotate(-15deg)
+}
+.letter6{
+    transform: rotate(-2deg)
+}
+.letter7{
+    transform: rotate(7deg)
+}
+.scores {
+    position: absolute;
+    font-family: 'Pangolin', cursive;
+    font-size: 40px;
+    top: 2.8em;
+    right: 2em;
+}
+.guesses {
+    position: absolute;
+    font-family: 'Pangolin', cursive;
+    font-size: 40px;
+    top: 5.6em;
+    right: 7em;
+}
+
+@media only screen and (max-width:980px){
+    .name {
+        font-size: 90px;
+        padding-bottom: 400px;
+    }
+}
+@media only screen and (max-width:768px){
+    .name{
+       font-size: 80px;
+       padding-bottom: 300px;
+       left: 4em;
+    }
+}
+@media only screen and (max-width:640px){
+    .name {
+        transform: rotate(0);
+    }
+    .letter1 {
+        left: .1em
+    }
+    .letter2 {
+        left: .9em
+    }
+    .letter3 {
+        left: 1.4em
+    }
+    .letter4 {
+        left: 2em
+    }
+    .letter5 {
+        left: 2.6em
+    }
+    .letter6 {
+        left: 3.5em
+    }
+    .letter7 {
+        left: 4.1em
+    }
+    .scores {
+        left: 2.4em;
+        font-size: 20px;
+    }
+}
