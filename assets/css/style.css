@@ -11,8 +11,8 @@ body {
     font-size: 150px;
     position: absolute;
     transform-origin: bottom center;
-    padding-bottom: 650px;
-    left: 4.5em;
+    padding-bottom: 550px;
+    left: 3.6em;
 }
 .letter1{
     transform: rotate(-55deg)
@@ -40,13 +40,13 @@ body {
     font-family: 'Pangolin', cursive;
     font-size: 30px;
     right: 1em;
-    top: 2.5em;
+    top: 1em;
 }
 .scores {
     position: absolute;
     font-family: 'Pangolin', cursive;
     font-size: 40px;
-    top: 2.8em;
+    top: 1.8em;
     right: 2em;
     border: 3px dashed black;
     padding: 1%;
@@ -55,16 +55,16 @@ body {
     position: absolute;
     font-family: 'Pangolin', cursive;
     font-size: 40px;
-    top: 17em;
-    left: 2em;
-    right: 36em;
+    top: 14em;
+    left: .5em;
+    right: 30em;
     transform: rotate(-20deg)
 }
 .star1 {
     width: 8%;
     position: absolute;
     transform: rotate(50deg);
-    top: 32em;
+    top: 44em;
 }
 .star2 {
     width: 11%;
@@ -75,8 +75,8 @@ body {
 .star3 {
     width: 20%;
     position: absolute;
-    right: 1.5em;
-    top: 26em;
+    right: 3.5em;
+    top: 38em;
     transform: rotate(-30deg)
 
 }
@@ -183,7 +183,7 @@ body {
     }
     .star3 {
         width: 120px;
-        left: 13em;
+        left: 12em;
         top: 32em;
     }
 }
