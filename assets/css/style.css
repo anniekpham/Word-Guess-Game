@@ -92,7 +92,12 @@ body {
         left: 4.1em
     }
     .scores {
-        left: 2.4em;
-        font-size: 20px;
+        left: 4.5em;
+        top: 3em;
+        font-size: 30px;
+    }
+    .guesses {
+        font-size: 30px;
+        left: 1em;
     }
 }
