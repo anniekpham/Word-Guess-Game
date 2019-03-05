@@ -1,18 +1,30 @@
 const wordbank = ['milkyway', `polaris`, `mars rover`, `aurora`, `constellation`]
-const letter = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
-const computerGuess = wordbank[Math.floor(Math.random() * wordbank.length)];
-const currentWord = computerGuess.split("").join("")
+var letter = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
+var computerGuess = wordbank[Math.floor(Math.random() * wordbank.length)];
+var currentWord = computerGuess.split("").join("")
 let answer = [];
 let wrongletters = [];
 let Won = 0;
 let Lost = 0;
 let Guesses = 10;
-
-function reset() {
+document.querySelector(`#goodjob`).style.visibility = 'hidden'
+// reset game when answer = guessed word or when #of guess = 0
+const reset = () => {
+    document.querySelector(`#goodjob`).style.visibility = 'hidden'
     answer = [];
     wrongletters = [];
-    Guesses = 10;
+    computerGuess = wordbank[Math.floor(Math.random() * wordbank.length)]
+    currentWord = computerGuess.split("").join("")
     document.querySelector(`#wrongletter`).innerHTML = ``
+    letter = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
+    for (i = 0; i < computerGuess.length; i++) {
+        if (computerGuess[i] === ` `) {
+            answer.push(` `);
+        } else {
+            answer.push(`_`);
+        }
+        document.querySelector(`#wordGuess`).textContent = `${answer.join(``)}`
+    }
 }
 
 // replace computerGuess word with underline 
@@ -25,6 +37,7 @@ for (i = 0; i < computerGuess.length; i++) {
     document.querySelector(`#wordGuess`).textContent = `${answer.join(``)}`
 }
 
+
 // start game by pressing any key to guess the letter
 document.onkeyup = e => {
     if (letter.indexOf(e.key) !==-1) {
@@ -35,14 +48,20 @@ document.onkeyup = e => {
                     answer[i] = e.key;
                     
                     document.querySelector(`#wordGuess`).textContent = `${answer.join(``)}`
-                    console.log(answer.join(``))
-                }       
-            }  
-            // increase win score and reset # of guess allow to 10 when all letters matches 
-            if (computerGuess === answer.join(``)){
-                Won++
-                Guesses = 10
-                reset()
+
+                    // increase win score and reset # of guess allow to 10 when all letters matches 
+                    if (computerGuess === answer.join(``)){
+                        document.querySelector(`#goodjob`).style.visibility = ''
+                        // let aplus = document.createElement(`p`)
+                        // aplus.textContent = `A+`
+
+                        // document.querySelector(`#goodjob`).append(aplus)
+
+                        Won++
+                        Guesses = 10
+                        setTimeout(reset,3000)
+                    }  
+                }     
             }  
         } else {
             // add letter to wrong guess when key pressed doesn't match
@@ -64,7 +83,8 @@ document.onkeyup = e => {
             }if (Guesses === 0){
                 Lost++
                 Guesses = 10
-                reset()
+                document.querySelector(`#goodjob`).innerHTML = `D`
+                reset()            
             }
         }
     }
