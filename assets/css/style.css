@@ -11,8 +11,8 @@ body {
     font-size: 150px;
     position: absolute;
     transform-origin: bottom center;
-    padding-bottom: 550px;
-    left: 3.6em;
+    padding-bottom: 500px;
+    left: 3.3em;
 }
 .letter1{
     transform: rotate(-55deg)
@@ -48,23 +48,21 @@ body {
     font-size: 40px;
     top: 1.8em;
     right: 2em;
-    border: 3px dashed black;
-    padding: 1%;
 }
 .guesses {
     position: absolute;
     font-family: 'Pangolin', cursive;
     font-size: 40px;
-    top: 14em;
-    left: .5em;
-    right: 30em;
-    transform: rotate(-20deg)
+    top: 15em;
+    left: 1em;
+    right: 29em;
 }
 .star1 {
     width: 8%;
     position: absolute;
     transform: rotate(50deg);
-    top: 44em;
+    top: 4em;
+    right: 20em;
 }
 .star2 {
     width: 11%;
@@ -72,19 +70,30 @@ body {
     top: 1em;
     left: .5em;
 }
-.star3 {
-    width: 20%;
-    position: absolute;
-    right: 3.5em;
-    top: 38em;
-    transform: rotate(-30deg)
-
+#wordGuess {
+    font-family: 'Pangolin', cursive;
+    font-size: 55px;
+    letter-spacing: 10px;
+    text-align: center;
+    padding-top: 38%;
+    /* display: none; */
+}
+#wrongletter {
+    font-size: 50px;
+    font-family: 'Pangolin', cursive;
+    text-align: center;
+    padding-top: 6%;
+    width: 50%;
+    margin: auto;
+    letter-spacing: 20px;
+    color: red;
 }
 
 @media only screen and (max-width:980px){
     .name {
         font-size: 70px;
         padding-bottom: 300px;
+        left: 4.3em;
     }
     .start {
         top: .8em;
@@ -122,12 +131,6 @@ body {
     }
     .star2{
         width: 15%
-    }
-    .star3 {
-        width: 30%;
-        transform: rotate(-20deg);
-        top: 33em;
-        right: 1.6em;
     }
 }
 @media only screen and (max-width:640px){
@@ -180,10 +183,5 @@ body {
     .star2 {
         width: 60px;
         top: 9em;
-    }
-    .star3 {
-        width: 120px;
-        left: 12em;
-        top: 32em;
     }
 }
