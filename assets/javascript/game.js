@@ -1,13 +1,15 @@
-const wordbank = ['milkyway', `polaris`, `mars rover`, `aurora`, `constellation`]
-var letter = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
+const wordbank = [`astronomy`, `eclipse`, `asteroid`, `nebula`, `galaxy`, `universe`,`milkyway`, `polaris`, `mars rover`, `aurora`, `constellation`];
+var letter = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`];
 var computerGuess = wordbank[Math.floor(Math.random() * wordbank.length)];
-var currentWord = computerGuess.split("").join("")
+var currentWord = computerGuess.split("").join("");
+var sound = new Audio(`shooting_star-Mike_Koenig-1132888100.mp3`);
 let answer = [];
 let wrongletters = [];
 let Won = 0;
 let Lost = 0;
 let Guesses = 10;
 document.querySelector(`#goodjob`).style.visibility = 'hidden'
+
 // reset game when answer = guessed word or when #of guess = 0
 const reset = () => {
     document.querySelector(`#goodjob`).style.visibility = 'hidden'
@@ -48,15 +50,11 @@ document.onkeyup = e => {
                     answer[i] = e.key;
                     
                     document.querySelector(`#wordGuess`).textContent = `${answer.join(``)}`
+                    sound.play()
 
                     // increase win score and reset # of guess allow to 10 when all letters matches 
                     if (computerGuess === answer.join(``)){
                         document.querySelector(`#goodjob`).style.visibility = ''
-                        // let aplus = document.createElement(`p`)
-                        // aplus.textContent = `A+`
-
-                        // document.querySelector(`#goodjob`).append(aplus)
-
                         Won++
                         Guesses = 10
                         setTimeout(reset,3000)
@@ -83,7 +81,6 @@ document.onkeyup = e => {
             }if (Guesses === 0){
                 Lost++
                 Guesses = 10
-                document.querySelector(`#goodjob`).innerHTML = `D`
                 reset()            
             }
         }
