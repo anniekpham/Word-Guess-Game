@@ -1,4 +1,4 @@
-const wordbank = [`milkyway`, `polaris`, `mars rover`, `aurora`, `constellation`]
+const wordbank = ['milkyway', `polaris`, `mars rover`, `aurora`, `constellation`]
 const letter = [`a`, `b`, `c`, `d`, `e`, `f`, `g`, `h`, `i`, `j`, `k`, `l`, `m`, `n`, `o`, `p`, `q`, `r`, `s`, `t`, `u`, `v`, `w`, `x`, `y`, `z`]
 const computerGuess = wordbank[Math.floor(Math.random() * wordbank.length)];
 const currentWord = computerGuess.split("").join("")
@@ -7,6 +7,13 @@ let wrongletters = [];
 let Won = 0;
 let Lost = 0;
 let Guesses = 10;
+
+function reset() {
+    answer = [];
+    wrongletters = [];
+    Guesses = 10;
+    document.querySelector(`#wrongletter`).innerHTML = ``
+}
 
 // replace computerGuess word with underline 
 for (i = 0; i < computerGuess.length; i++) {
@@ -35,6 +42,7 @@ document.onkeyup = e => {
             if (computerGuess === answer.join(``)){
                 Won++
                 Guesses = 10
+                reset()
             }  
         } else {
             // add letter to wrong guess when key pressed doesn't match
@@ -56,6 +64,7 @@ document.onkeyup = e => {
             }if (Guesses === 0){
                 Lost++
                 Guesses = 10
+                reset()
             }
         }
     }
